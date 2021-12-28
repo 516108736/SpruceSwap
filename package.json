@@ -24,6 +24,7 @@
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.3.4",
+    "edit-json-file": "^1.6.0",
     "ethereum-waffle": "^3.0.2",
     "ethereumjs-util": "^7.0.3",
     "ethers": "^5.1.0",
@@ -47,6 +48,7 @@
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "bignumber.js": "^9.0.1",
     "dotenv": "^10.0.0",
+    "strip-hex-prefix": "^1.0.0",
     "truffle-hdwallet-provider": "1.0.17"
   }
 }

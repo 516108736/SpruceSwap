@@ -51,6 +51,7 @@ module.exports = {
     testnet: {
       provider: () => new HDWalletProvider(MNEMONIC, TESTNET_URL,0,2),
       network_id: 65,
+      gasPrice: 1000000000
     },
     mainnet: {
       provider: () => new HDWalletProvider(MNEMONIC, MAINNET_URL,0,2),
