@@ -20,7 +20,7 @@
     "@openzeppelin/hardhat-upgrades": "^1.6.0",
     "@openzeppelin/test-environment": "^0.1.9",
     "@openzeppelin/test-helpers": "^0.5.10",
-    "@truffle/hdwallet-provider": "^1.2.3",
+    "@truffle/hdwallet-provider": "^1.7.0",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.3.4",
@@ -47,6 +47,7 @@
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "bignumber.js": "^9.0.1",
     "dotenv": "^10.0.0",
+    "edit-json-file": "^1.7.0",
     "truffle-hdwallet-provider": "1.0.17"
   }
 }
