@@ -97,6 +97,7 @@ module.exports = async function(deployer, network, accounts) {
     var stakingRewardInstance = await StakingRewards.deployed();
     myMap.set("StakingRewards1", stakingRewardInstance.address);
 
+    console.log("111")
 
     var erc20I = await ERC20.at(lp1)
     var balance = await erc20I.balanceOf(accounts[0])
@@ -110,13 +111,14 @@ module.exports = async function(deployer, network, accounts) {
     await erc20I.transfer(stakingRewardInstance.address, balance / 2)
     await stakingRewardInstance.notifyRewardAmount(balance / 2)
     await stakingRewardInstance.getReward()
-
+    console.log("222")
 
     // deploy lp2 mining
     await deployer.deploy(StakingRewards, accounts[0], erc20List[2], lp2, 63072000);
     var stakingRewardInstance = await StakingRewards.deployed();
     myMap.set("StakingRewards2", stakingRewardInstance.address);
 
+    console.log("333")
 
     var erc20I = await ERC20.at(lp2)
     var balance = await erc20I.balanceOf(accounts[0])
@@ -132,7 +134,7 @@ module.exports = async function(deployer, network, accounts) {
     await stakingRewardInstance.getReward()
 
 
-
+    console.log("444")
 
     json.push(Object.fromEntries(myMap))
     fs.writeFile(OutPutFile,JSON.stringify(json),(err)=>{
