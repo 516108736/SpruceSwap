@@ -24,7 +24,7 @@ const SafeMath = artifacts.require("SafeMath");
 const StakingRewards = artifacts.require("StakingRewards");
 
 
-var OutPutFile = "/Users/oker/scf/gopath/src/github.com/SpruceSwap/SpruceSwap/cList.json"
+var OutPutFile = "./cList.json"
 const json = require(OutPutFile)
 const deadline = 1956981781
 
