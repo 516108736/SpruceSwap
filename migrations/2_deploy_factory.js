@@ -140,7 +140,6 @@ module.exports = async function(deployer, network, accounts) {
     fs.writeFile(OutPutFile,JSON.stringify(json),(err)=>{
       if (err) console.log("err",err)
     })
-    continue
     console.log("index", ts)
   }
 };
