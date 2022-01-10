@@ -21,9 +21,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 require('dotenv').config()
-const MNEMONIC = process.env.MNEMONIC.split(',');
 const MAINNET_URL = process.env.MAINNET_URL
-const TESTNET_URL = process.env.TESTNET_URL
 
 module.exports = {
   /**
@@ -44,23 +42,28 @@ module.exports = {
     // options below to some value.
     //
     local: {
-      host: "127.0.0.1",     // Localhost (default: none)
-      port: 8545,            // Standard Ethereum port (default: none)
-      network_id: "8",       // Any network (default: none)
+      host: "127.0.0.1", // Localhost (default: none)
+      port: 8545, // Standard Ethereum port (default: none)
+      network_id: "8", // Any network (default: none)
     },
     testnet: {
-      provider: () => new HDWalletProvider(MNEMONIC, TESTNET_URL,0,2),
+      //provider: () => new HDWalletProvider("5e5596cd26d16211f6c5be7c8a6e0732cdf4ed1ff4def5bfa338f3363df6ee5d", "https://http-testnet.hecochain.com"),
+      provider: () => new HDWalletProvider("8ff3ca2d9985c3a52b459e2f6e7822b23e1af845961e22128d5f372fb9aa5f17", "https://exchaintestrpc.okex.org"),
       network_id: 65,
-      gasPrice: 1000000000
+      gas: 30000000,
+      gasPrice: 1000000000,
+      networkCheckTimeout: 100000000,
+      timeoutBlocks: 2000,
+      deploymentPollingInterval: 80000
     },
     mainnet: {
-      provider: () => new HDWalletProvider(MNEMONIC, MAINNET_URL,0,2),
+      provider: () => new HDWalletProvider(MNEMONIC, MAINNET_URL, 0, 2),
       network_id: 66,
     },
     development: {
-     host: "127.0.0.1",     // Localhost (default: none)
-     port: 8545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
+      host: "127.0.0.1", // Localhost (default: none)
+      port: 8545, // Standard Ethereum port (default: none)
+      network_id: "*", // Any network (default: none)
     },
   },
 
@@ -72,7 +75,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "^0.6.6",    // Fetch exact version from solc-bin (default: truffle's version)
+      version: "^0.6.6", // Fetch exact version from solc-bin (default: truffle's version)
       settings: {
         optimizer: {
           enabled: true,
