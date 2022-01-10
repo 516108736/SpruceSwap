@@ -4,7 +4,7 @@ const fs = require('fs');
 
 var REGEX = /hex'(.{64,})/g;
 
-module.exports = function replace(path, regex, replacedContent) {
+function replace(path, regex, replacedContent) {
     // load the html file
     var fileContent = fs.readFileSync(path, 'utf8');
 
