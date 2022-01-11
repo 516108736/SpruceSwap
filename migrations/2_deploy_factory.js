@@ -41,7 +41,7 @@ module.exports = async function(deployer, network, accounts) {
 
   var json = []
 
-  for (ts = 0; ts < 3; ts++) {
+  for (tIndex = 0; tIndex < 3; tIndex++) {
     let myMap = new Map();
     var erc20Name = new Array()
     var erc20List = new Array()
