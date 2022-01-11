@@ -47,9 +47,8 @@ module.exports = {
       network_id: "8", // Any network (default: none)
     },
     testnet: {
-      //provider: () => new HDWalletProvider("5e5596cd26d16211f6c5be7c8a6e0732cdf4ed1ff4def5bfa338f3363df6ee5d", "https://http-testnet.hecochain.com"),
-      provider: () => new HDWalletProvider("8ff3ca2d9985c3a52b459e2f6e7822b23e1af845961e22128d5f372fb9aa5f17", "https://exchaintestrpc.okex.org"),
-      network_id: 65,
+      provider: () => new HDWalletProvider("privateKey", "http://127.0.0.1:8545"),
+      network_id: 67,
       gas: 30000000,
       gasPrice: 1000000000,
       networkCheckTimeout: 100000000,
