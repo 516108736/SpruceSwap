@@ -141,7 +141,7 @@ module.exports = async function(deployer, network, accounts) {
     await stakingRewardInstance.notifyRewardAmount(balance / 2)
     await stakingRewardInstance.getReward()
 
-
+    console.log("--- index ---",index)
 
     json.push(Object.fromEntries(myMap))
   }
