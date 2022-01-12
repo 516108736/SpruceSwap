@@ -6,7 +6,7 @@ var REGEX = /hex'(.{64,})/g;
 
 const OutPutFile = './cList.json'
 
-function resetContractFile(){
+function resetContractFile() {
   fs.unlink(OutPutFile, function(error) {
     if (error) {
       console.log(error);
@@ -32,7 +32,7 @@ const SafeMath = artifacts.require("SafeMath");
 const StakingRewards = artifacts.require("StakingRewards");
 
 const swapDeadLine = 1956981781
-const stakingRewardsDuration=63072000
+const stakingRewardsDuration = 63072000
 
 // deploy swap factory
 module.exports = async function(deployer, network, accounts) {
@@ -141,7 +141,7 @@ module.exports = async function(deployer, network, accounts) {
     await stakingRewardInstance.notifyRewardAmount(balance / 2)
     await stakingRewardInstance.getReward()
 
-    console.log("--- index ---",index)
+    console.log("--- index ---", tIndex)
 
     json.push(Object.fromEntries(myMap))
   }
