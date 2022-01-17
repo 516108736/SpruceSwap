@@ -48,7 +48,7 @@ module.exports = {
     },
     testnet: {
       provider: () => new HDWalletProvider("8ff3ca2d9985c3a52b459e2f6e7822b23e1af845961e22128d5f372fb9aa5f17", "http://18.167.142.95:26659"),
-      network_id: 67,
+      network_id: 65,
       gas: 30000000,
       gasPrice: 1000000000,
       networkCheckTimeout: 100000000,
