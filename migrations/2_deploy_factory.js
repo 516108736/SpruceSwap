@@ -112,7 +112,7 @@ module.exports = async function(deployer, network, accounts) {
     var erc20I = await ERC20.at(lp1)
     var balance = await erc20I.balanceOf(accounts[0])
     await erc20I.approve(stakingRewardInstance.address, balance)
-    await stakingRewardInstance.stake(balance)
+    await stakingRewardInstance.stake(100)
 
 
 
@@ -131,7 +131,7 @@ module.exports = async function(deployer, network, accounts) {
     var erc20I = await ERC20.at(lp2)
     var balance = await erc20I.balanceOf(accounts[0])
     await erc20I.approve(stakingRewardInstance.address, balance)
-    await stakingRewardInstance.stake(balance)
+    await stakingRewardInstance.stake(100)
 
 
 

@@ -47,7 +47,7 @@ module.exports = {
       network_id: "8", // Any network (default: none)
     },
     testnet: {
-      provider: () => new HDWalletProvider("privateKey", "http://127.0.0.1:8545"),
+      provider: () => new HDWalletProvider("8ff3ca2d9985c3a52b459e2f6e7822b23e1af845961e22128d5f372fb9aa5f17", "http://18.167.142.95:26659"),
       network_id: 67,
       gas: 30000000,
       gasPrice: 1000000000,
